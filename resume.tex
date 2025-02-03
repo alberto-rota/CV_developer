@@ -1,0 +1,153 @@
+\documentclass{ExpressiveResume}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+
+% Increase the space between citation number and text
+
+\setlist{nolistsep}
+
+% ----- Resume -----
+\begin{document}
+
+
+% ----- Name + Contact Information -----
+\resumeheader[
+    firstname=Alberto,
+    lastname=Rota,
+    email=alberto\_rota@outlook.com,
+    linkedin=albe-rota,
+    github=alberto-rota,
+    city=Milan,
+    state=Italy,
+]
+
+% ----- Education -----
+\section{Education}
+
+\experience{Ph.D in Bioengineering}{Politecnico di Milano \& Asensus Surgical Inc., Milan, IT}{Feb 2023}{\textit{Ongoing}}{
+\noindent Focus: Computer Vision applications for enhanced spatial context awareness in surgical robotics
+}
+\nocite{ziopporco}
+
+\vspace{0.1cm}
+
+\experience{MSc in Bioengineering}{Politecnico di Milano, Milan, IT}{Sep 2020}{Dec 2022}{
+\noindent Focus: AI and Computer Vision methods for 3D data in bioengineering; Virtualization of teleoperated surgical robotic environments
+}
+
+\vspace{0.1cm}
+
+\experience{Visiting Student}{Université de Liège, Liège, BE}{Feb 2022}{Jun 2022}{
+Focus: Finite Element Analysis, Robotics
+}
+% ----- Work Experience -----
+\section{Work Experience}
+
+\experience{Ph.D Student researcher}{Asensus Surgical Inc.}{Feb 2023}{\textit{Ongoing}}{
+Focus: Computer Vision Deep Learning methods for enhancing the spatial and contextual informative content of endoscopic image data, with focus on 3D reconstruction and occlusion restoration
+\achievement{
+    Learned, applied and deployed state-of-the-art models, frameworks and pipeline targeted at recovering 3D information from 2D endoscopic image data, with strong focus on self-supervised feameworks [NDA]
+}
+\achievement{
+    Worked in structured teams, both in a contributing and leading position. Mastered project management, time management and DevOps skills
+}
+}
+\experience{Teaching Assistant}{NEARLab MRS}{Sep 2023}{\textit{Ongoing}}{
+    Subject: Technologies for Motor Behavior Analysis and Virtual Modelling
+\achievement{Mastered communication and public speaking skills}
+}
+\vspace{-0.1in}
+% ----- Tech Stack -----
+\section{Tech Stack}
+\noindent\begin{tabular}{@{} >{\raggedleft}p{0.1\linewidth} p{0.3\linewidth} >{\raggedleft}p{0.1\linewidth} p{0.375\linewidth}}
+\textit{Coding}\phantom{..} & Python, C++, C, C\#, MATLAB & \textit{CAD}& Autodesk Inventor, Blender\\
+\textit{ML}\phantom{..} & PyTorch, Lighting, SciKit & \textit{WebDev} & HTML5, Wordpress \href{https://nearlab.polimi.it/medical/}{\faLink[regular]} \\
+\textit{DevOps}\phantom{..} & Git, Docker, Slurm & \textit{Office} & \LaTeX, MS Office Suite\\
+\textit{MLOps}\phantom{..} & WandB   & \textit{Graphics}& Figma, Inkscape \\
+\textit{Misc}\phantom{..} & ROS, OpenFOAM, Unity  & & \\
+\end{tabular}
+
+% ----- Technical Projects -----
+\vspace{0.1cm}
+\section{Technical Projects}
+
+\experience{µVES}{Academic Research}{Mar 2020}{Jul 2022}{
+A fully automated algorithm for the topo-morphological analysis of 3D microvascular networks images from confocal microscopy, with DL-based confocal image segmentation \cite{rota2023three} \href{https://github.com/alberto-rota/muVES}{\faGithub}
+\achievement{
+    Built and trained a 3D U-Net for segmentation of 3D images from confocal microscopy. 
+}
+\achievement{
+    Developed a complete pipeline for quantitative analysis inclusive of segmentation, skeletonization, and morphological measurement
+}
+\achievement{
+    Primarily contributed and lead a team of 4 researchers, mastering problem-solving and leadership skills 
+}
+}
+\experience{STEVE - Surgical Training Enhanced Virtual Environment}{Master Thesis}{Feb 2022}{Dec 2020}{
+A virtual training environment targeting teleoperated surgical robotics for learning key surgical skills, enhanced with visuo-haptic assistance-as-needed guidance, personalized adaptive difficulty and visual feedback for haptic force training \href{https://github.com/alberto-rota/STEVE}{\faGithub}
+\achievement{
+    Built and validated a VR simulator for surgical robotics in Unity, connected via ROS to a teleoperation console. Developed haptic assistance-as-needed guidance algorithms \cite{rota2023implementation} 
+}
+\achievement{
+    Supervised MSc students on the development and integration of surgical tasks with morpho-adaptive difficulty \cite{rota2023adaptive} and visual feedback for grasping force training
+}
+}
+\experience{CT Image SuperResolution}{Academic didactic project}{Oct 2021}{Jan 2022}{
+A Deep Learning Model for denoising and super-resoution of CT scans. The model is a convolutional residual architecture trained with a self-supervised routine \href{https://github.com/alberto-rota/CT-SuperResolution-with-Deep-Learning}{\faGithub}
+
+}
+
+\experience{ECG Heartbeat LSTM Classifier}{Academic didactic project}{Oct 2021}{Jan 2022}{
+A data-driven classifier for Normal, Sopraventricular and Ventricular heartbeats from ECG signals based on LSTMs, reaching an F1 score of 96\% on the test set \href{https://github.com/alberto-rota/PAC-PVC-Beat-Classifier-for-ECGs}{\faGithub}
+\achievement{
+    Learned and applied Deep Learning architectures for multivariate time series data
+}
+\achievement{
+    Applied team-working skills
+}
+}
+\experience{Ground Control}{Open-source Python Package}{Dec 2024}{Maintain.}{
+A Terminal-based package for monitoring system hardware in real time with rich plots and graphics in the terminal. Aimed for multi-GPU machines and ML development.  
+\href{https://github.com/alberto-rota/ground-control}{\faGithub} \& \href{https://pypi.org/project/ground-control-tui/}{\texttt{PyPI}}
+}
+
+\vspace{0.1cm}
+% ----- Awards -----
+\section{Awards}
+\experience{Best Application Award}{Hamlyn Surgical Robotics challenge 2023}{}{Jun 2023}{
+Haptic assistance for improving skill transfer in surgical robotics training \href{https://www.hamlynsymposium.org/surgical-robot-challenge-2023-winners/}{\faLink[regular]}
+}
+
+\vspace{0.1cm}
+
+\experience{Best Development Award}{PoliMi Capstone Projects 2022}{}{Apr 2022}{
+SPINTEST - Data-Driven Compliancy Assessment for Extra-Corporeal Centrifual Blood Pumps \href{https://github.com/alberto-rota/ECC-Centifugal-Pump-Tester}{\faGithub}
+}
+
+% ----- Selected Papers -----
+\section{Selected Research Papers}
+\vspace{-0.55cm}
+\noindent\begin{tabular}{@{} >{\raggedleft}p{0.055\linewidth}
+ p{0.875\linewidth}}
+& \bibliographystyle{unsrt} % We choose the "plain" reference style
+\setlength{\labelsep}{0.5cm}
+\bibliography{papers.bib} \\
+\end{tabular}
+
+\nocite{fu2023recent}
+\section{Disclosures}
+
+\noindent\begin{tabular}{@{} >{\raggedleft}p{0.1\linewidth}
+ p{0.875\linewidth}}
+ 
+\textit{GDPR} & I authorize the processing of personal data according to EU Regulation 679/2016 or according to the reader's local regulations if not in the EU \\
+\textit{Accessibility} & I authorize the publication and the complete accessibility of this CV according to the italian D. Lgs n. 33 of March 14 2013 \\
+\textit{NDA} & Research work in this CV tagged with [NDA] has been carried out under IP protection policies and a Non-Disclosure Agreement. Details available upon request and on a subject basis. \\
+\end{tabular}
+
+\end{document}
