@@ -4,18 +4,13 @@
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{etoolbox}
+\usepackage[none]{hyphenat}
+
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
-
-
-% Increase the space between citation number and text
-
 \setlist{nolistsep}
 
-% ----- Resume -----
 \begin{document}
-
-
-% ----- Name + Contact Information -----
+%=================================================== NAME AND CONTACT ===================================================%
 \resumeheader[
     firstname=Alberto,
     lastname=Rota,
@@ -25,99 +20,168 @@
     city=Milan,
     state=Italy,
 ]
+\vspace{0.2in}
+%=================================================== EXPERIENCE ===================================================%
+\section{Experience}
+\experience{PhD Student Researcher}{Asensus Surgical Inc.}{Feb 2023}{\textit{Present}}{
+Focus: Computer Vision Deep Learning methods for enhancing the spatial and contextual informative content of endoscopic image data, with focus on 3D reconstruction and occlusion restoration
+\achievement{
+    Developed, applied and surpassed state-of-the-art models and pipelines targeted at recovering 3D information from 2D endoscopic image data, with strong focus on self-supervised frameworks [NDA]
+}
 
-% ----- Education -----
+\achievement{
+    Researched, developed and tested geometry-aware learned representations of 3D endoscopic spaces and 2D images [NDA]
+}
+\achievement{
+    Worked in structured teams, both in contributing and leading positions
+}
+\achievement{
+    Gained project management, time management and DevOps skills
+}
+}
+% \vspace{0.1cm}
+\vspace{-0.1in}
+\experience{Teaching Assistant}{NEARLab Medical Robotics}{Sep 2023}{\textit{Present}}{
+    Primary Course: Technologies for Motor Behavior Analysis and Virtual Modeling \newline Guest Lectures at: Medical Robotics and Technologies for Computer Aided Surgery
+\achievement{Gained communication, didactic and public speaking skills}
+}
+\vspace{-0.1in}
+\experience{Scientific Communicator}{Politecnico di Milano}{Oct 2023}{\textit{Present}}{
+    Course: \textit{Understanding Artificial Intelligence} \href{https://github.com/alberto-rota/Conoscere-l-Intelligenza-Artificiale}{\faGithub}
+\achievement{Introduced the basics of neural networks and data-driven algorithms interactively to high school students, reaching out to over 12 schools and 500 students over the course of 2 years}
+\achievement{Developed didactic and teaching skills}
+}
+\vspace{-0.1in}
+%=================================================== EDUCATION ===================================================%
 \section{Education}
 
 \experience{Ph.D in Bioengineering}{Politecnico di Milano \& Asensus Surgical Inc., Milan, IT}{Feb 2023}{\textit{Ongoing}}{
 \noindent Focus: Computer Vision applications for enhanced spatial context awareness in surgical robotics
 }
-\nocite{ziopporco}
 
 \vspace{0.1cm}
 
+\experience{Visiting Research Fellow}{Computer Aided Medical Procedures Lab, TUM, Munich, DE}{July 2025}{Dec 2025}{
+Focus: Implicit neural representation for spatial reconstruction in endoscopic surgery
+}
+
+\vspace{0.1cm}
 \experience{MSc in Bioengineering}{Politecnico di Milano, Milan, IT}{Sep 2020}{Dec 2022}{
 \noindent Focus: AI and Computer Vision methods for 3D data in bioengineering; Virtualization of teleoperated surgical robotic environments
 }
 
 \vspace{0.1cm}
 
-\experience{Visiting Student}{Université de Liège, Liège, BE}{Feb 2022}{Jun 2022}{
-Focus: Finite Element Analysis, Robotics
-}
-% ----- Work Experience -----
-\section{Work Experience}
-
-\experience{Ph.D Student researcher}{Asensus Surgical Inc.}{Feb 2023}{\textit{Ongoing}}{
-Focus: Computer Vision Deep Learning methods for enhancing the spatial and contextual informative content of endoscopic image data, with focus on 3D reconstruction and occlusion restoration
-\achievement{
-    Learned, applied and deployed state-of-the-art models, frameworks and pipeline targeted at recovering 3D information from 2D endoscopic image data, with strong focus on self-supervised feameworks [NDA]
-}
-\achievement{
-    Worked in structured teams, both in a contributing and leading position. Mastered project management, time management and DevOps skills
-}
-}
-\experience{Teaching Assistant}{NEARLab MRS}{Sep 2023}{\textit{Ongoing}}{
-    Subject: Technologies for Motor Behavior Analysis and Virtual Modelling
-\achievement{Mastered communication and public speaking skills}
-}
-\vspace{-0.1in}
-% ----- Tech Stack -----
+%=================================================== TECH STACK ===================================================%
 \section{Tech Stack}
-\noindent\begin{tabular}{@{} >{\raggedleft}p{0.1\linewidth} p{0.3\linewidth} >{\raggedleft}p{0.1\linewidth} p{0.375\linewidth}}
-\textit{Coding}\phantom{..} & Python, C++, C, C\#, MATLAB & \textit{CAD}& Autodesk Inventor, Blender\\
-\textit{ML}\phantom{..} & PyTorch, Lighting, SciKit & \textit{WebDev} & HTML5, Wordpress \href{https://nearlab.polimi.it/medical/}{\faLink[regular]} \\
-\textit{DevOps}\phantom{..} & Git, Docker, Slurm & \textit{Office} & \LaTeX, MS Office Suite\\
-\textit{MLOps}\phantom{..} & WandB   & \textit{Graphics}& Figma, Inkscape \\
-\textit{Misc}\phantom{..} & ROS, OpenFOAM, Unity  & & \\
+\noindent\begin{tabular}{@{} >{\raggedleft}p{0.1\linewidth} p{0.35\linewidth} >{\raggedleft}p{0.1\linewidth} p{0.375\linewidth}}
+\textit{ML/AI}\phantom{.} & Python, PyTorch, SciKit, WandB & \textit{Research}\phantom{.}& MATLAB, \LaTeX, Consensus\\
+\textit{CV}\phantom{.} & OpenCV, Open3D, Huggingface, Rerun & \textit{Robotics}\phantom{.} & ROS, Unity \\
+\textit{DevOps}\phantom{.} & Docker, Git, Slurm & \textit{3D/CAD}\phantom{.} & Blender, Autodesk Inventor\\
+\textit{Coding}\phantom{.} & C, C\#, C++   & \textit{Graphics}\phantom{.}& Figma \\
+\textit{LLMs}\phantom{.} & Claude, ChatGPT, Cursor, MCP   & \textit{Misc}\phantom{.} & OpenFOAM, Wordpress, MS Office \\
+\end{tabular}
+% \vspace{0.5cm}
+
+% \vspace{0.3cm}
+%=================================================== AI SKILLS ===================================================%
+\vspace{0.5cm}
+\section{AI Tooling and Prompt Engineering}
+\noindent\begin{tabular}{@{} >{\raggedleft}p{0.1\linewidth} p{0.63\linewidth} p{0.35\linewidth}}
+
+\textit{Coding}\phantom{..} & Advanced prompt engineering for code generation, debugging, refactoring, technical 
+documentation, task decomposition and iterative development &  \hspace{1cm}\textit{Claude}, \textit{Cursor}\\
+
+\textit{Research}\phantom{..} & Literature review automation, paper summarization,  research synthesis, crafting of queries for comprehensive academic search and analysis. &  \hspace{1cm}\textit{ChatGPT}, \textit{Consensus}\\
+
+\textit{Writing}\phantom{..} & Advanced prompt engineering for academic writing, manuscript revision,  tone adaptation, clarity enhancement and communication. & \hspace{1cm}\textit{Claude}, \textit{ChatGPT} \\
+
+\textit{Image Gen}\phantom{..} & Competent in generating and refining synthetic visual content with diffusion-based models. &  \hspace{1cm}\textit{DALL-E} \\
 \end{tabular}
 
-% ----- Technical Projects -----
-\vspace{0.1cm}
-\section{Technical Projects}
+%=================================================== TECHNICAL PROJECTS ===================================================%
+\section{Project Contributions}
 
-\experience{µVES}{Academic Research}{Mar 2020}{Jul 2022}{
-A fully automated algorithm for the topo-morphological analysis of 3D microvascular networks images from confocal microscopy, with DL-based confocal image segmentation \cite{rota2023three} \href{https://github.com/alberto-rota/muVES}{\faGithub}
+\experience{Self-Supervised Image Matching in Endoscopic Surgery}{Sole contributor}{Dec 2024}{May 2025}{
+Developed an end-to-end self-supervised pipeline based on novel-view synthesis and contrastive optimization for semantic embedding adaptation of DINOv2 features towards a pixel matching task in the surgical endoscopy domain \cite{rota2025self} [NDA]
 \achievement{
-    Built and trained a 3D U-Net for segmentation of 3D images from confocal microscopy. 
+    Ideated and developed an SSL pipeline for establishing pseudo-ground-matches in source-synthetic endoscopic image pairs to be used for contrastive learning
 }
 \achievement{
-    Developed a complete pipeline for quantitative analysis inclusive of segmentation, skeletonization, and morphological measurement
+    Trained an adapter for DINOv2 to produce localized semantics to be used for correspondance tasks
+}
+\achievement{
+    Surpassed state-of-the-art models for pixel matching tasks
+}
+}
+
+\experience{µVES - microVascular Evaluation System}{Leader and Primary contributor}{Mar 2020}{Jul 2022}{
+Built a fully automated pipeline for the topological and morphological analysis of 3D micro-vascular networks images from confocal microscopy, with Deep-Learning-based confocal image segmentation and integration with a CFD simulation software \cite{rota2023three} \href{https://github.com/alberto-rota/muVES}{\faGithub}
+\achievement{
+    Built and trained a 3D U-Net for segmentation of 3D confocal microscopy images. 
+}
+\achievement{
+    Developed a complete pipeline for quantitative analysis inclusive of segmentation, skeletonization, and quantitative morphological measurements
 }
 \achievement{
     Primarily contributed and lead a team of 4 researchers, mastering problem-solving and leadership skills 
 }
 }
-\experience{STEVE - Surgical Training Enhanced Virtual Environment}{Master Thesis}{Feb 2022}{Dec 2020}{
-A virtual training environment targeting teleoperated surgical robotics for learning key surgical skills, enhanced with visuo-haptic assistance-as-needed guidance, personalized adaptive difficulty and visual feedback for haptic force training \href{https://github.com/alberto-rota/STEVE}{\faGithub}
+
+\vspace{0.1cm}
+\experience{STEVE - Surgical Training Enhanced Virtual Environment}{Sole contributor}{Feb 2022}{Dec 2020}{
+Built a virtual reality training environment targeting teleoperated surgical robotics, enhanced with visuo-haptic assistance-as-needed guidance, personalized adaptive difficulty and visual feedback for haptic force training \cite{rota2023implementation} \href{https://github.com/alberto-rota/STEVE}{\faGithub}
 \achievement{
-    Built and validated a VR simulator for surgical robotics in Unity, connected via ROS to a teleoperation console. Developed haptic assistance-as-needed guidance algorithms \cite{rota2023implementation} 
+    Built a VR simulator for surgical robotics in C\# with Unity, connected via ROS to a teleoperation console. Developed haptic assistance-as-needed guidance algorithms 
+}
+\achievement{
+    Planned and conducted and experimental study for statistical validation of the effect of the guidance strategies
 }
 \achievement{
     Supervised MSc students on the development and integration of surgical tasks with morpho-adaptive difficulty \cite{rota2023adaptive} and visual feedback for grasping force training
 }
 }
-\experience{Ground Control}{Open-source Python Package}{Dec 2024}{\textit{Maintain.}}{
-A Terminal-based package for monitoring system hardware in real time with rich plots and graphics in the terminal. Aimed for multi-GPU machines and ML development.  
-\href{https://github.com/alberto-rota/ground-control}{\faGithub} \& \href{https://pypi.org/project/ground-control-tui/}{\texttt{PyPI}}
-}
-\experience{CT Image SuperResolution}{Academic didactic project}{Oct 2021}{Jan 2022}{
-A Deep Learning Model for denoising and super-resoution of CT scans. The model is a convolutional residual architecture trained with a self-supervised routine \href{https://github.com/alberto-rota/CT-SuperResolution-with-Deep-Learning}{\faGithub}
-
-}
-
-\experience{ECG Heartbeat LSTM Classifier}{Academic didactic project}{Oct 2021}{Jan 2022}{
-A data-driven classifier for Normal, Sopraventricular and Ventricular heartbeats from ECG signals based on LSTMs, reaching an F1 score of 96\% on the test set \href{https://github.com/alberto-rota/PAC-PVC-Beat-Classifier-for-ECGs}{\faGithub}
-\achievement{
-    Learned and applied Deep Learning architectures for multivariate time series data
-}
-\achievement{
-    Applied team-working skills
-}
-}
 
 \vspace{0.1cm}
-% ----- Awards -----
+\experience{OVIT - Ovarian Cancer Resectability Classification Pipeline}{Minor Contributor}{Oct 2024}{Mar 2025}{
+ Participated in the development of a Deep Learning decision-support-system for Ovarian Cancer treatment planning \cite{fati2024deep} \href{https://github.com/FrancescaFati/UnderXAI-OVIT}{\faGithub}
+\achievement{
+    Contributed to the development, statistical validation and academic publication of the pipeline
+}
+\achievement{
+    Designed and assembled a heavy-duty multi-GPU workstation for the clinical Deep Learning workload, with remote SSH/VNC access, Dockerized environments, and strict adherence to GDPR and data privacy best practices
+}
+
+}
+% \experience{CT Image SuperResolution}{Academic didactic project}{Oct 2021}{Jan 2022}{
+% A Deep Learning Model for denoising and super-resoution of CT scans. The model is a convolutional residual architecture trained with a self-supervised routine \href{https://github.com/alberto-rota/CT-SuperResolution-with-Deep-Learning}{\faGithub}
+% }
+% \vspace{0.1cm}
+
+% \experience{ECG Heartbeat LSTM Classifier}{Co-contributor}{Oct 2021}{Jan 2022}{
+% A data-driven classifier for Normal, Sopraventricular and Ventricular heartbeats from ECG signals based on LSTMs, reaching an F1 score of 96\% on the test set \href{https://github.com/alberto-rota/PAC-PVC-Beat-Classifier-for-ECGs}{\faGithub}
+% \achievement{
+%     Learned and applied Deep Learning architectures for multivariate time series data
+% }
+% \achievement{
+%     Applied team-working skills
+% }
+% }
+%=================================================== OPEN SOURCE  ===================================================%
+
+\section{Open Source Contributions}
+\vspace{0.1cm}
+\experience{Ground Control}{Open-source Python Package}{Dec 2024}{\textit{Maintain.}}{
+A Terminal-based package for monitoring system hardware in real time with rich plots and graphics in the terminal. Aimed for multi-GPU machines and ML workflows.  
+\href{https://github.com/alberto-rota/ground-control}{\faGithub} \& \href{https://pypi.org/project/ground-control-tui/}{\texttt{PyPI}}
+}
+\vspace{0.1cm}
+\experience{DaSSHboard}{VSCode Extension}{Apr 2025}{\textit{Maintain.}}{
+A stylish customizable VS Code extension to manage multiple SSH remote connections with a smart one-click dashboard for faster access to remote development.
+\href{https://github.com/alberto-rota/DaSSHboard}{\faGithub} \& \href{https://marketplace.visualstudio.com/items?itemName=AlbertoRota.dasshboard}{\faWindows}
+}
+
+%=================================================== AWARDS ===================================================%
 \section{Awards}
 \experience{Best Application Award}{Hamlyn Surgical Robotics challenge 2023}{}{Jun 2023}{
 Haptic assistance for improving skill transfer in surgical robotics training \href{https://www.hamlynsymposium.org/surgical-robot-challenge-2023-winners/}{\faLink[regular]}
@@ -128,18 +192,23 @@ Haptic assistance for improving skill transfer in surgical robotics training \hr
 \experience{Best Development Award}{PoliMi Capstone Projects 2022}{}{Apr 2022}{
 SPINTEST - Data-Driven Compliancy Assessment for Extra-Corporeal Centrifual Blood Pumps \href{https://github.com/alberto-rota/ECC-Centifugal-Pump-Tester}{\faGithub}
 }
-
-% ----- Selected Papers -----
+\vspace{-0.1in}
+%=================================================== PAPERS ===================================================%
 \section{Selected Research Papers}
 \vspace{-0.55cm}
 \noindent\begin{tabular}{@{} >{\raggedleft}p{0.055\linewidth}
- p{0.875\linewidth}}
+ p{0.92\linewidth}}
 & \bibliographystyle{unsrt} % We choose the "plain" reference style
 \setlength{\labelsep}{0.5cm}
 \bibliography{papers.bib} \\
 \end{tabular}
 
 \nocite{fu2023recent}
+% \nocite{fati2024deep}
+
+
+
+%=================================================== DISCLOSURES ===================================================%
 \section{Disclosures}
 
 \noindent\begin{tabular}{@{} >{\raggedleft}p{0.1\linewidth}
