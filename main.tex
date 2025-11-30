@@ -39,16 +39,15 @@ Focus: Computer Vision Deep Learning methods for enhancing the spatial and conte
     Gained project management, time management and DevOps skills
 }
 }
-% \vspace{0.1cm}
 \vspace{-0.1in}
-\experience{Teaching Assistant}{NEARLab Medical Robotics}{Sep 2023}{\textit{Present}}{
+\experience{Teaching Assistant}{NEARLab Medical Robotics, Politecnico di Milano}{Sep 2023}{\textit{Present}}{
     Primary Course: Technologies for Motor Behavior Analysis and Virtual Modeling \newline Guest Lectures at: Medical Robotics and Technologies for Computer Aided Surgery
 \achievement{Gained communication, didactic and public speaking skills}
 }
 \vspace{-0.1in}
 \experience{Scientific Communicator}{Politecnico di Milano}{Oct 2023}{\textit{Present}}{
     Course: \textit{Understanding Artificial Intelligence} \href{https://github.com/alberto-rota/Conoscere-l-Intelligenza-Artificiale}{\faGithub}
-\achievement{Introduced the basics of neural networks and data-driven algorithms interactively to high school students, reaching out to over 12 schools and 500 students over the course of 2 years}
+\achievement{Introduced the basics of neural networks and data-driven algorithms interactively to high school students, reaching out to over 16 schools and 500 students over the course of 2 years}
 \achievement{Developed didactic and teaching skills}
 }
 \vspace{-0.1in}
@@ -61,8 +60,8 @@ Focus: Computer Vision Deep Learning methods for enhancing the spatial and conte
 
 \vspace{0.1cm}
 
-\experience{Visiting Research Fellow}{Computer Aided Medical Procedures Lab, TUM, Munich, DE}{July 2025}{Dec 2025}{
-Focus: Implicit neural representation for spatial reconstruction in endoscopic surgery
+\experience{Visiting Research Fellow}{Chair of Photogrammetry and Remote Sensing, TUM, Munich, DE}{July 2025}{Dec 2025}{
+Focus: Geometry-guided reconstruction for challenging visual domains.
 }
 
 \vspace{0.1cm}
@@ -77,7 +76,7 @@ Focus: Implicit neural representation for spatial reconstruction in endoscopic s
 \noindent\begin{tabular}{@{} >{\raggedleft}p{0.1\linewidth} p{0.35\linewidth} >{\raggedleft}p{0.1\linewidth} p{0.375\linewidth}}
 \textit{ML/AI}\phantom{.} & Python, PyTorch, SciKit, WandB & \textit{Research}\phantom{.}& MATLAB, \LaTeX, Consensus\\
 \textit{CV}\phantom{.} & OpenCV, Open3D, Huggingface, Rerun & \textit{Robotics}\phantom{.} & ROS, Unity \\
-\textit{DevOps}\phantom{.} & Docker, Git, Slurm & \textit{3D/CAD}\phantom{.} & Blender, Autodesk Inventor\\
+\textit{DevOps}\phantom{.} & Docker, Git, Slurm, Tailscale & \textit{3D/CAD}\phantom{.} & Blender, Autodesk Inventor\\
 \textit{Coding}\phantom{.} & C, C\#, C++   & \textit{Graphics}\phantom{.}& Figma \\
 \textit{LLMs}\phantom{.} & Claude, ChatGPT, Cursor, MCP   & \textit{Misc}\phantom{.} & OpenFOAM, Wordpress, MS Office \\
 \end{tabular}
@@ -100,9 +99,25 @@ documentation, task decomposition and iterative development &  \hspace{1cm}\text
 \end{tabular}
 
 %=================================================== TECHNICAL PROJECTS ===================================================%
-\section{Project Contributions}
+\section{Research Project Contributions}
 
-\experience{Self-Supervised Image Matching in Endoscopic Surgery}{Sole contributor}{Dec 2024}{May 2025}{
+\experience{UnReflectAnything}{Project Lead and Primary Contributor}{Jul 2025}{Nov 2025}{
+Conceived, developed, and led the full research agenda of \textit{UnReflectAnything}, an RGB-only framework that removes specular highlights from arbitrary images by predicting a highlight map and reconstructing a reflection-free diffuse image. \cite{rota2025unreflect}
+
+\achievement{
+    Designed and implemented a physically grounded synthetic ground-truth pipeline for virtually rendering and compositing specular highlights onto any RGB image
+}
+\achievement{
+    Built and trained a token-space inpainting module capable of removing specularities and restoring diffuse illumination at the feature level
+}
+\achievement{
+    Achieved competitive or state-of-the-art performance across multiple quantitative metrics compared to leading delighting and reflection removal methods
+}
+}
+
+
+
+\experience{Self-Supervised Feature Matching in Endoscopic Surgery}{Sole contributor}{Dec 2024}{Jul 2025}{
 Developed an end-to-end self-supervised pipeline based on novel-view synthesis and contrastive optimization for semantic embedding adaptation of DINOv2 features towards a pixel matching task in the surgical endoscopy domain \cite{rota2025self} [NDA]
 \achievement{
     Ideated and developed an SSL pipeline for establishing pseudo-ground-matches in source-synthetic endoscopic image pairs to be used for contrastive learning
@@ -111,7 +126,7 @@ Developed an end-to-end self-supervised pipeline based on novel-view synthesis a
     Trained an adapter for DINOv2 to produce localized semantics to be used for correspondance tasks
 }
 \achievement{
-    Surpassed state-of-the-art models for pixel matching tasks
+    Surpassed state-of-the-art models  pixel matching tasks on surgical endoscopy imagery
 }
 }
 
@@ -143,7 +158,7 @@ Built a virtual reality training environment targeting teleoperated surgical rob
 }
 
 \vspace{0.1cm}
-\experience{OVIT - Ovarian Cancer Resectability Classification Pipeline}{Minor Contributor}{Oct 2024}{Mar 2025}{
+\experience{OVIT - Ovarian Cancer Resectability Prediction}{Minor Contributor}{Oct 2024}{Mar 2025}{
  Participated in the development of a Deep Learning decision-support-system for Ovarian Cancer treatment planning \cite{fati2024deep} \href{https://github.com/FrancescaFati/UnderXAI-OVIT}{\faGithub}
 \achievement{
     Contributed to the development, statistical validation and academic publication of the pipeline
@@ -171,16 +186,22 @@ Built a virtual reality training environment targeting teleoperated surgical rob
 
 \section{Open Source Contributions}
 \vspace{0.1cm}
-\experience{Ground Control}{Open-source Python Package}{Dec 2024}{\textit{Maintain.}}{
+\experience{Ground Control}{Open-source Python Package}{Dec 2024}{\textit{Maintainer}}{
 A Terminal-based package for monitoring system hardware in real time with rich plots and graphics in the terminal. Aimed for multi-GPU machines and ML workflows.  
 \href{https://github.com/alberto-rota/ground-control}{\faGithub} \& \href{https://pypi.org/project/ground-control-tui/}{\texttt{PyPI}}
 }
 \vspace{0.1cm}
-\experience{DaSSHboard}{VSCode Extension}{Apr 2025}{\textit{Maintain.}}{
+
+\experience{DaSSHboard}{VSCode Extension}{Apr 2025}{\textit{Maintainer}}{
 A stylish customizable VS Code extension to manage multiple SSH remote connections with a smart one-click dashboard for faster access to remote development.
 \href{https://github.com/alberto-rota/DaSSHboard}{\faGithub} \& \href{https://marketplace.visualstudio.com/items?itemName=AlbertoRota.dasshboard}{\faWindows}
 }
 
+\vspace{0.1cm}
+\experience{MedView}{VSCode Extension}{Jul 2025}{\textit{Contributor}}{
+A fast environment to preview and interact with medical images directly from a code editor, with support for \texttt{.nii} and \texttt{.dcm} files, aimed at streamlining AI development tasks in the medical image analysis field.
+\href{https://github.com/FrancescaFati/MedView}{\faGithub} \& \href{https://marketplace.visualstudio.com/items?itemName=FrancescaFati.medview}{\faWindows}
+}
 %=================================================== AWARDS ===================================================%
 \section{Awards}
 \experience{Best Application Award}{Hamlyn Surgical Robotics challenge 2023}{}{Jun 2023}{
@@ -192,7 +213,7 @@ Haptic assistance for improving skill transfer in surgical robotics training \hr
 \experience{Best Development Award}{PoliMi Capstone Projects 2022}{}{Apr 2022}{
 SPINTEST - Data-Driven Compliancy Assessment for Extra-Corporeal Centrifual Blood Pumps \href{https://github.com/alberto-rota/ECC-Centifugal-Pump-Tester}{\faGithub}
 }
-\vspace{-0.1in}
+
 %=================================================== PAPERS ===================================================%
 \section{Selected Research Papers}
 \vspace{-0.55cm}
@@ -214,8 +235,10 @@ SPINTEST - Data-Driven Compliancy Assessment for Extra-Corporeal Centrifual Bloo
 \noindent\begin{tabular}{@{} >{\raggedleft}p{0.1\linewidth}
  p{0.875\linewidth}}
  
-\textit{GDPR} & I authorize the processing of personal data according to EU Regulation 679/2016 or according to the reader's local regulations if not in the EU \\
-\textit{Accessibility} & I authorize the publication and the complete accessibility of this CV according to the italian D. Lgs n. 33 of March 14 2013 \\
+\textit{GDPR} & I authorize the processing of personal data according to EU Regulation 679/2016 or according to the reader’s
+ local regulations if not in the EU \\
+\textit{Accessibility} & I authorize the publication and the complete accessibility of this CV according to the italian D. Lgs n. 33 of
+ March 14 2013 \\
 \textit{NDA} & Research work in this CV tagged with [NDA] has been carried out under IP protection policies and a Non-Disclosure Agreement. Details available upon request and on a subject basis. \\
 \end{tabular}
 
